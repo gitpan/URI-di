@@ -1,14 +1,15 @@
 ---
 abstract: 'Implementation of the di: URI scheme from draft-hallambaker-digesturi'
 author:
-  - 'Dorian Taylor, C<< <dorian at cpan.org> >>, Dorian Taylor <dorian@cpan.org>'
+  - 'Dorian Taylor, C<< <dorian at cpan.org> >>'
+  - 'Dorian Taylor <dorian@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.36
   Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: 0
+  ExtUtils::MakeMaker: 6.36
 dynamic_config: 0
-generated_by: 'ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.112621'
+generated_by: 'Module::Install version 1.04, CPAN::Meta::Converter version 2.120921'
 license: apache
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -16,10 +17,12 @@ meta-spec:
 name: URI-di
 no_index:
   directory:
-    - t
     - inc
+    - t
 requires:
   Digest: 0
   MIME::Base64: 0
   URI: 0
+resources:
+  license: http://apache.org/licenses/LICENSE-2.0
 version: 0.02

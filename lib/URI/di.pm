@@ -6,7 +6,7 @@ require URI::_punycode;
 require URI::QueryParam;
 @ISA=qw(URI::_query URI);
 
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 # not sure why the module is laid out like this, oh well.
 
@@ -101,7 +101,7 @@ sub compute {
 
     # we need these right away
     my $is_blessed = Scalar::Util::blessed($data);
-    my $is_digest  = $is_blessed and $data->isa('Digest::base');
+    my $is_digest  = $is_blessed && $data->isa('Digest::base');
 
     $algo = $algo ? lc $algo : 'sha-256';
     $self = ref $self ? $self->clone : URI->new("di:$algo");
@@ -442,8 +442,7 @@ Copyright 2012 Dorian Taylor.
 Licensed under the Apache License, Version 2.0 (the "License"); you
 may not use this file except in compliance with the License.  You may
 obtain a copy of the License at
-
-    L<http://www.apache.org/licenses/LICENSE-2.0>
+L<http://www.apache.org/licenses/LICENSE-2.0>.
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
